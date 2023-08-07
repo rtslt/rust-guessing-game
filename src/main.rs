@@ -1,12 +1,10 @@
-use std::{io, cmp::Ordering};
 use rand::Rng;
+use std::{cmp::Ordering, io};
 
 fn main() {
     println!("Guessing the number!");
     let secret_number = rand::thread_rng().gen_range(1..=100);
     // println!("The secret number is {secret_number}");
-    
-    
 
     loop {
         println!("Input number.");
@@ -29,9 +27,7 @@ fn main() {
             Ordering::Equal => {
                 println!("You win!");
                 break;
-            },
+            }
         }
     }
-
-    
 }
